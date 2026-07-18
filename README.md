@@ -40,9 +40,7 @@ Visit the live project here:
 ```text
 counter-app/
 │── index.html
-│── style.css
-│── script.js
-└── README.md
+│── README.md
 ```
 
 ## 💻 Getting Started
