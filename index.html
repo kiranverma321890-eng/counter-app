@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<br lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            margin:0px;
+            text-align:center;
+        }
+
+        h1 {
+            font-size: 160px;
+            color: black;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            background-color: aliceblue;
+            padding: 20px;
+            color: black;
+            border-radius: 12px 25px;
+            border: 1px solid;
+            cursor: pointer;
+            font-size: large;
+        }
+        button:hover{
+            color:white;
+            background-color:black;
+        }
+    </style>
+</head>
+
+<br>
+<div class="h1">
+    <h1 id="counter">0</h1>
+</div>
+<div class="button-container">
+    <button id="increase">+</button>
+    <button id="reset">Reset</button>
+    <button id="decrease">-</button>
+</div>
+
+<script>
+    const countText = document.querySelector("#counter");
+    const increase = document.querySelector("#increase");
+    const decrease = document.querySelector("#decrease");
+    const reset = document.querySelector("#reset");
+    let count = 0;
+    increase.addEventListener("click", () => {
+        count++;
+        countText.textContent = count;
+         if(count > 0 ){
+            countText.style.color="green";
+        }
+    });
+    decrease.addEventListener("click", () => {
+        count--;
+        countText.textContent = count;
+        if(count <0 ){
+            countText.style.color="red";
+        }
+    });
+    reset.addEventListener("click", () => {
+        count = 0;
+        countText.textContent = count;
+        if(count == 0){
+            countText.style.color = "black";
+        }
+        
+    });
+</script>
+</body>
+
+</html>
